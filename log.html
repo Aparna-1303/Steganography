@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body 
+        {
+            background-color: #0e0b16;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container 
+        {
+            background-color: #1a1a2e;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #0ffff0;
+            text-align: center;
+        }
+
+        .login-container h2 
+        {
+            color: #0ffff0;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #0ffff0;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] 
+        {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #0e0b16;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 0 10px #0ffff0;
+        }
+
+        .login-container input[type="submit"] 
+        {
+            background-color: #1a1a2e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .login-container input[type="submit"]:hover 
+        {
+            background-color: #0ffff0;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 0 15px #0ffff0;
+        }
+
+        .login-container a 
+        {
+            color: #0ffff0;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .login-container a:hover 
+        {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form onsubmit="return redirectpage()">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+            <a href="web.html">know about our website?</a>
+        </form>
+    </div>
+    <script>
+        function redirectpage()
+        {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username == "ADMIN" && password == "team-03"|| username == "aparana" && password =="charan")
+            {
+                alert("welcome to home page");
+                window.location.href = "home.html";
+            }
+            else
+            {
+                alert("Invalid login credentials");
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

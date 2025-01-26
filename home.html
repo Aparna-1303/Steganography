@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Steganography - Hide a Secret Text Message in an Image</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="steganography.js"></script>
+</head>
+<body>
+   <div class="border">
+    <div class="container">
+        <h1>CYBER SCIENCE</h1>
+        
+        <div class="frame" id="imageFrame">
+            <img id="image" src="" alt="">
+            <img onerror="this.style.display='none'">
+        </div>
+        
+        <textarea id="message" placeholder="Enter your secret message here..."></textarea>
+        
+        <div class="buttons">
+            <input type="file" id="fileInput" accept="image/*">
+            <button id="hideButton">Hide Data</button>
+            <button id="showButton">Show Data</button>
+            <button id="saveButton">Save Image</button>
+        </div>
+    </div>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>
